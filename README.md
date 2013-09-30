@@ -1,4 +1,0 @@
-Particles
-=========
-
-basic particle engine
