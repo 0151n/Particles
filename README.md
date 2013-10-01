@@ -26,15 +26,17 @@ run this at the terminal in the parent directory:
 'mkdir bin'
 
 Then
-
-'javac -cp .:lib/* src/*.java -d bin'
-
+```sh
+javac -cp .:lib/* src/*.java -d bin
+```
 **Running**
 
 I you get no errors after the compile then you can run the code with this
 command in the *bin* directory.
 
-'java -cp ../lib/* -Djava.library.path=../native/linux Engine'
+```sh
+java -cp ../lib/* -Djava.library.path=../native/linux Engine
+```
 
 Windows
 -------
@@ -48,6 +50,6 @@ Same as linux instructions.
 If you get no errors after the compile then you can run the code with
 this command in the *bin* directory.
 
-'java -cp ../lib/* -Djava.library.path=../native/windows Engine'
+`java -cp ../lib/* -Djava.library.path=../native/windows Engine`
 
 
