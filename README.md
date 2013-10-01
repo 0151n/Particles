@@ -50,6 +50,7 @@ Same as linux instructions.
 If you get no errors after the compile then you can run the code with
 this command in the *bin* directory.
 
-`java -cp ../lib/* -Djava.library.path=../native/windows Engine`
-
+```
+java -cp ../lib/* -Djava.library.path=../native/windows Engine
+```
 
