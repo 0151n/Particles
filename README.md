@@ -9,9 +9,14 @@ A basic particle engine written in java using **LWJGL**.
 
 Currently at a very **early stage** don't expect anything *brilliant* for a while.
 
-I am focusing on the *collision* detection for the moment the
+I am focusing on the *collision detection* for the moment the
 collision detection I have in place is pretty terrible but I should 
 have that fixed soon.
+
+Dependencies
+------------
+To build and run this project you'll need the 
+*Java jdk* and the *Java jre*.
 
 Compiling and Running
 ---------------------
@@ -19,13 +24,14 @@ Compiling and Running
 Linux
 -----
 **Scripts** 
+
 If you don't want to run the commands manually you can use the scripts:
 
-*compile_lin.sh*
-To compile.
+To compile: *compile_lin.sh*
 
-*run_lin.sh*
-To run.
+
+To run: *run_lin.sh*
+
 
 
 
@@ -33,7 +39,9 @@ To run.
 
 run this at the terminal in the parent directory:
 
-'mkdir bin'
+```sh
+mkdir bin
+```
 
 Then
 ```sh
@@ -50,10 +58,13 @@ java -cp ../lib/* -Djava.library.path=../native/linux Engine
 
 Windows
 -------
+**Scripts**
+
+Will have Windows scripts up soon.
 
 **Compilation**
 
-Same as linux instructions.
+Same as Linux instructions.
 
 **Running**
 
