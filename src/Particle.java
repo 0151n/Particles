@@ -46,38 +46,32 @@ public class Particle {
 	}
 	public void run () {
 	if(active == true){
-if(moving == true){
+	    if(moving == true){
+		//set random variables for falling calculations
 		xg = rand.nextInt(inxg);
 		yg = rand.nextInt(inyg);
 		neg = rand.nextBoolean();
-	//y axis bouncing
+
 	
-		if(y >= (10 + yg)) y -= yg;
-if(y > 10){
+		if(y >= (2 + yg)) y -= yg;
+		
+		if(y > 4){
 	
-	if(neg && x >= (10 + xg))x -= xg;
+		    if(neg && x >= (4 + xg))x -= xg;
 	
-	else if(!neg && x <= (800 - xg)) x += xg;
+		    else if(!neg && x <= (800 - xg)) x += xg;
 	
+		}
 }
-}
-//XXX change to draw from Cartesian style coordinate at center of particle
+
 	GL11.glColor3f(r, g, b);
 	GL11.glBegin(GL11.GL_QUADS);
-	    GL11.glVertex2f(x + 10,y - 10);
-	    GL11.glVertex2f(x + 10,y + 10);
-	    GL11.glVertex2f(x - 10,y + 10);
-	    GL11.glVertex2f(x - 10,y - 10);
+	    GL11.glVertex2f(x + 2,y - 2);
+	    GL11.glVertex2f(x + 2,y + 2);
+	    GL11.glVertex2f(x - 2,y + 2);
+	    GL11.glVertex2f(x - 2,y - 2);
 	GL11.glEnd();
 	
-	//waiting
-/*
-try {
-	Thread.sleep(10);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}*/
 	}
 	
 	}
