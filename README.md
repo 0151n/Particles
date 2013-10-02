@@ -21,11 +21,11 @@ Linux
 **Scripts** 
 If you don't want to run the commands manually you can use the scripts:
 
-*compile_lin.sh*
-To compile.
+To compile: *compile_lin.sh*
 
-*run_lin.sh*
-To run.
+
+To run: *run_lin.sh*
+
 
 
 
@@ -33,7 +33,9 @@ To run.
 
 run this at the terminal in the parent directory:
 
-'mkdir bin'
+```sh
+mkdir bin
+```
 
 Then
 ```sh
