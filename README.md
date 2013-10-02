@@ -18,6 +18,16 @@ Compiling and Running
 
 Linux
 -----
+**Scripts** 
+If you don't want to run the commands manually you can use the scripts:
+
+*compile_lin.sh*
+To compile.
+
+*run_lin.sh*
+To run.
+
+
 
 **Compilation**
 
@@ -50,7 +60,7 @@ Same as linux instructions.
 If you get no errors after the compile then you can run the code with
 this command in the *bin* directory.
 
-```
+```sh
 java -cp ../lib/* -Djava.library.path=../native/windows Engine
 ```
 
