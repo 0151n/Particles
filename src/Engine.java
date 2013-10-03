@@ -26,6 +26,11 @@ public class Engine {
 		int maxpart = 1000;
 		int x = Mouse.getX();
 		int y = Mouse.getY();
+		//collision detection variables
+		double dist;
+		int distx;
+		int disty;
+		
 		//Main particle array
 		Particle[]  array = new Particle[maxpart];
 	
@@ -37,7 +42,7 @@ public class Engine {
 		GL11.glMatrixMode(GL11.GL_MODELVIEW);
 
 		for(int i = 0;i <= maxpart - 1;i++){
-			array[i] = new Particle(300,600,1.0f,0.0f,0.0f,2,10,false,true);
+			array[i] = new Particle(300,600,1.0f,0.0f,0.0f,1,10,false,true);
 		
 		}
 		while (!Display.isCloseRequested()) {
@@ -52,18 +57,19 @@ public class Engine {
 				array[i].run();
 
 				//collion detection (if you can call it that)			
+				//get some variables to make it more readable
 				
-
 				for(int n = 0;n <= maxpart - 1;n++){
 			if(array[n].active == true){
-					if(array[n].x <= (array[i].x + 4) && array[n].x + 4 >= (array[i].x)){
-							if(array[n].y + 4 >= (array[i].y) && array[n].y <= (array[i].y + 4)){
-								array[n].moving = false;
-							}
-							else array[n].moving = true;
-						
-					}
-						else array[n].moving = true;
+			
+			distx = array[i].x - array[n].x;
+			disty = array[i].y - array[n].y;
+			
+			dist = Math.sqrt((distx * distx) + (disty * disty));
+			
+			if(dist <= 10)array[n].moving = false;
+			else array[n].moving = true;
+				
 			}	
 			}
 			

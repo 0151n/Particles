@@ -53,11 +53,11 @@ public class Particle {
 		neg = rand.nextBoolean();
 
 	
-		if(y >= (2 + yg)) y -= yg;
+		if(y >= (5 + yg)) y -= yg;
 		
-		if(y > 4){
+		if(y > 5){
 	
-		    if(neg && x >= (4 + xg))x -= xg;
+		    if(neg && x >= (5 + xg))x -= xg;
 	
 		    else if(!neg && x <= (800 - xg)) x += xg;
 	
@@ -66,10 +66,10 @@ public class Particle {
 
 	GL11.glColor3f(r, g, b);
 	GL11.glBegin(GL11.GL_QUADS);
-	    GL11.glVertex2f(x + 2,y - 2);
-	    GL11.glVertex2f(x + 2,y + 2);
-	    GL11.glVertex2f(x - 2,y + 2);
-	    GL11.glVertex2f(x - 2,y - 2);
+	    GL11.glVertex2f(x + 5,y - 5);
+	    GL11.glVertex2f(x + 5,y + 5);
+	    GL11.glVertex2f(x - 5,y + 5);
+	    GL11.glVertex2f(x - 5,y - 5);
 	GL11.glEnd();
 	
 	}
