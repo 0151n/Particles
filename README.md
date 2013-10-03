@@ -5,7 +5,7 @@ Particles
 Intro
 -----
 
-A basic particle engine written in java using **LWJGL**.
+A basic particle game written in java using **LWJGL**.
 
 Currently at a very **early stage** don't expect anything *brilliant* for a while.
 
@@ -58,6 +58,7 @@ java -cp ../lib/* -Djava.library.path=../native/linux Engine
 
 Windows
 -------
+**IMPORTANT:** This method should work but it didn't on my Windows machine.
 **Scripts**
 
 Will have Windows scripts up soon.
